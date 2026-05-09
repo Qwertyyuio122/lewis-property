@@ -58,7 +58,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               <Link
                 to="/contact"
-                className="group w-full md:w-auto px-12 py-6 rounded-full bg-accent text-primary font-black uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(196,183,138,0.4)] active:scale-95 no-underline flex items-center justify-center gap-3"
+                className="group w-full md:w-auto px-12 py-6 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white font-black uppercase tracking-widest transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-3 no-underline"
               >
                 Start Management <ArrowRight size={20} className="transition-transform group-hover:translate-x-2" />
               </Link>
@@ -120,8 +120,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-fluid-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <AnimatedSection>
-              <div className="relative rounded-[3rem] overflow-hidden group shadow-2xl bg-gradient-to-br from-primary-light to-primary min-h-[400px] flex items-center justify-center border border-white/5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(226,192,68,0.1),transparent_50%)]" />
+              <div className="relative rounded-[3rem] overflow-hidden group shadow-2xl min-h-[400px] border border-white/5">
+                <img 
+                  src="/canadian-neighborhood-advantage.png" 
+                  alt="Beautiful Canadian Neighborhood" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-12 left-12 right-12 z-10">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-primary font-bold shadow-xl">01</div>
@@ -176,9 +181,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { title: 'Lawn Mowing', img: '/lawn-mowing.jpg.webp', desc: 'Reliable, high-quality lawn care to maintain your property’s curb appeal.' },
-              { title: 'Snow Removal', img: '/snow-removal.jpg', desc: 'Prompt snow clearing services ensuring safety and accessibility during winter.' },
-              { title: 'Tree Removal', img: '/tree-removal.jpg', desc: 'Professional tree maintenance and removal to protect your property and enhance aesthetics.' }
+              { title: 'Lawn Mowing', img: '/lawn-mowing.jpg.webp' },
+              { title: 'Snow Removal', img: '/snow-removal.jpg' },
+              { title: 'Tree Removal', img: '/tree-removal.jpg' }
             ].map((srv, i) => (
               <AnimatedSection key={i} delay={i * 150}>
                 <div className="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-contrast-low transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
@@ -186,9 +191,6 @@ export default function Home() {
                     <img src={srv.img} alt={srv.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-80" />
                     <h3 className="absolute bottom-6 left-8 font-heading text-3xl font-bold text-white">{srv.title}</h3>
-                  </div>
-                  <div className="p-8">
-                    <p className="text-contrast-mid text-lg leading-relaxed">{srv.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>

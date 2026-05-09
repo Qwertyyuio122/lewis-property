@@ -54,9 +54,8 @@ export default function Contact() {
   return (
     <div className="bg-canvas">
       {/* Hero - Clean Gradient Header */}
-      <section className="relative pt-48 pb-24 overflow-hidden bg-primary">
-        <div className="shape-blob top-0 right-0 w-[800px] h-[800px] bg-accent/10 opacity-30" />
-        <div className="shape-blob -bottom-40 -left-40 w-[600px] h-[600px] bg-accent/5 opacity-20" />
+      <section className="relative pt-48 pb-24 overflow-hidden bg-[#0a0f1d]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1d] to-primary" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-fluid-md">
           <AnimatedSection>
@@ -151,7 +150,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-contrast-mid ml-1">Full Name *</label>
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary ml-1">Full Name *</label>
                         <input
                           name="name"
                           type="text"
@@ -159,11 +158,11 @@ export default function Contact() {
                           value={form.name}
                           onChange={handleChange}
                           placeholder="Your Name"
-                          className="w-full px-6 py-5 rounded-2xl bg-surface border border-transparent focus:border-accent focus:bg-white transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40"
+                          className="w-full px-6 py-5 rounded-2xl bg-canvas border-2 border-contrast-low focus:border-accent transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40 shadow-sm"
                         />
                       </div>
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-contrast-mid ml-1">Email Address *</label>
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary ml-1">Email Address *</label>
                         <input
                           name="email"
                           type="email"
@@ -171,30 +170,30 @@ export default function Contact() {
                           value={form.email}
                           onChange={handleChange}
                           placeholder="your@email.com"
-                          className="w-full px-6 py-5 rounded-2xl bg-surface border border-transparent focus:border-accent focus:bg-white transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40"
+                          className="w-full px-6 py-5 rounded-2xl bg-canvas border-2 border-contrast-low focus:border-accent transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40 shadow-sm"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-contrast-mid ml-1">Phone Number</label>
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary ml-1">Phone Number</label>
                         <input
                           name="phone"
                           type="tel"
                           value={form.phone}
                           onChange={handleChange}
                           placeholder="(902) 000-0000"
-                          className="w-full px-6 py-5 rounded-2xl bg-surface border border-transparent focus:border-accent focus:bg-white transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40"
+                          className="w-full px-6 py-5 rounded-2xl bg-canvas border-2 border-contrast-low focus:border-accent transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40 shadow-sm"
                         />
                       </div>
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-contrast-mid ml-1">Area of Interest</label>
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary ml-1">Area of Interest</label>
                         <select
                           name="service"
                           value={form.service}
                           onChange={handleChange}
-                          className="w-full px-6 py-5 rounded-2xl bg-surface border border-transparent focus:border-accent focus:bg-white transition-all duration-300 outline-none font-bold text-primary appearance-none cursor-pointer"
+                          className="w-full px-6 py-5 rounded-2xl bg-canvas border-2 border-contrast-low focus:border-accent transition-all duration-300 outline-none font-bold text-primary appearance-none cursor-pointer shadow-sm"
                         >
                           <option value="">Select a Service</option>
                           <option value="residential">Residential Management</option>
@@ -206,7 +205,7 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-contrast-mid ml-1">Your Message *</label>
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary ml-1">Your Message *</label>
                       <textarea
                         name="message"
                         required
@@ -214,20 +213,20 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="How can we help you?"
                         rows={5}
-                        className="w-full px-6 py-5 rounded-3xl bg-surface border border-transparent focus:border-accent focus:bg-white transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40 resize-none min-h-[150px]"
+                        className="w-full px-6 py-5 rounded-3xl bg-canvas border-2 border-contrast-low focus:border-accent transition-all duration-300 outline-none font-bold text-primary placeholder:text-contrast-mid/40 resize-none min-h-[150px] shadow-sm"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full py-6 rounded-full bg-primary text-white font-black uppercase tracking-[0.2em] transition-all duration-300 hover:bg-accent hover:text-primary hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-4 disabled:opacity-50"
+                      className="w-full py-6 rounded-full bg-accent text-primary font-black uppercase tracking-[0.2em] transition-all duration-300 hover:bg-primary hover:text-white hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-4 disabled:opacity-50 shadow-xl shadow-accent/20"
                     >
                       {loading ? (
                         <Loader2 className="animate-spin" size={24} />
                       ) : (
                         <>
-                          Send Inquiry <Send size={20} />
+                          Send Secure Message <Send size={20} />
                         </>
                       )}
                     </button>

@@ -44,7 +44,7 @@ const transformations = [
   },
 ];
 
-function SliderCard({ before, after, title, category, tags }: typeof transformations[0]) {
+function SliderCard({ before, after, title }: typeof transformations[0]) {
   const [sliderPos, setSliderPos] = useState(50);
   const [dragging, setDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -73,21 +73,12 @@ function SliderCard({ before, after, title, category, tags }: typeof transformat
 
   return (
     <div className="group rounded-[2rem] overflow-hidden bg-white border border-contrast-low shadow-lg transition-all duration-500 hover:shadow-2xl">
-      {/* Category badge */}
-      <div className="px-10 pt-10 pb-6 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-xs font-extrabold tracking-[0.2em] uppercase text-primary/40">{category}</span>
-        </div>
-        <div className="text-[10px] font-bold tracking-widest text-contrast-mid uppercase bg-surface px-4 py-1.5 rounded-full">
-          Drag to Compare
-        </div>
-      </div>
+
 
       {/* Image comparison slider */}
       <div
         ref={containerRef}
-        className="relative select-none mx-4 mb-4 rounded-2xl overflow-hidden aspect-[16/10] cursor-ew-resize"
+        className="relative select-none rounded-[2rem] overflow-hidden aspect-[16/10] cursor-ew-resize m-4 shadow-inner"
         onMouseDown={() => setDragging(true)}
         onTouchStart={() => setDragging(true)}
       >
@@ -128,17 +119,7 @@ function SliderCard({ before, after, title, category, tags }: typeof transformat
         </div>
       </div>
 
-      {/* Details */}
-      <div className="px-10 pb-10 pt-6">
-        <h3 className="font-heading text-2xl font-bold text-primary mb-6">{title}</h3>
-        <div className="flex flex-wrap gap-3">
-          {tags.map((tag) => (
-            <span key={tag} className="text-[10px] font-bold uppercase tracking-widest text-contrast-mid bg-surface px-5 py-2 rounded-full border border-contrast-low transition-soft hover:border-accent hover:text-accent">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
+
     </div>
   );
 }
@@ -148,11 +129,8 @@ export default function BeforeAfter() {
     <div className="bg-canvas">
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] scale-110 motion-safe:animate-[pulse_10s_ease-in-out_infinite]"
-          style={{ backgroundImage: 'url(/after-exterior-1.webp)', opacity: 0.5 }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-primary/30" />
+        <div className="absolute inset-0 bg-[#0a0f1d]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-[#0a0f1d]/80 to-transparent" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-fluid-md pb-24 pt-40">
           <AnimatedSection>

@@ -81,16 +81,7 @@ export default function About() {
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={200}>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/service-inspection.webp" 
-                  alt="Professional Inspection" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-accent/20 mix-blend-overlay" />
-              </div>
-            </AnimatedSection>
+
           </div>
         </div>
       </section>
@@ -130,7 +121,7 @@ export default function About() {
           <AnimatedSection className="text-center mb-16">
             <span className="text-accent font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Our Footprint</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">Serving the Island</h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">We are proud to manage properties across the most vibrant communities in Prince Edward Island.</p>
+            <p className="text-white text-lg max-w-2xl mx-auto font-semibold">We are proud to manage properties across the most vibrant communities in Prince Edward Island.</p>
           </AnimatedSection>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

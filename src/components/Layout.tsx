@@ -96,18 +96,7 @@ export default function Layout({ children }: LayoutProps) {
               );
             })}
             
-            <Link 
-              to="/contact" 
-              className="ml-4 px-6 py-3 rounded-full bg-primary text-white text-sm font-bold tracking-wider uppercase transition-soft hover:bg-accent hover:text-primary hover:scale-105 active:scale-95"
-              style={{
-                background: scrolled ? 'var(--primary)' : 'rgba(255,255,255,0.1)',
-                backdropFilter: scrolled ? 'none' : 'blur(10px)',
-                border: scrolled ? 'none' : '1px solid rgba(255,255,255,0.2)',
-                color: scrolled ? '#fff' : '#fff',
-              }}
-            >
-              Get Started
-            </Link>
+
           </nav>
 
           {/* Mobile menu toggle */}
