@@ -81,18 +81,34 @@ export default function About() {
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={200}>
-              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white p-12 border border-contrast-low flex flex-col items-center justify-center gap-8 group">
-                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <img 
-                  src="/five-stars.png" 
-                  alt="5 Star Service Rating" 
-                  className="w-full max-w-[400px] h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="text-center relative z-10">
-                  <div className="text-primary font-black text-4xl mb-2">5.0 / 5.0</div>
-                  <div className="text-contrast-mid font-bold tracking-widest uppercase text-xs">Customer Excellence Rating</div>
+            <AnimatedSection delay={200} className="flex flex-col items-center justify-center">
+              <div className="flex flex-col gap-4 items-center">
+                {/* Row 1: 3 Stars */}
+                <div className="flex gap-4">
+                  {[1, 2, 3].map((n) => (
+                    <img 
+                      key={n}
+                      src="/star-premium.png" 
+                      alt="Star" 
+                      className="w-20 h-20 md:w-28 md:h-28 object-contain mix-blend-multiply"
+                    />
+                  ))}
                 </div>
+                {/* Row 2: 2 Stars */}
+                <div className="flex gap-4">
+                  {[1, 2].map((n) => (
+                    <img 
+                      key={n}
+                      src="/star-premium.png" 
+                      alt="Star" 
+                      className="w-20 h-20 md:w-28 md:h-28 object-contain mix-blend-multiply"
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <div className="text-primary font-black text-4xl mb-2">5.0 / 5.0</div>
+                <div className="text-contrast-mid font-bold tracking-widest uppercase text-xs">Customer Excellence Rating</div>
               </div>
             </AnimatedSection>
           </div>
