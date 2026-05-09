@@ -81,7 +81,20 @@ export default function About() {
               </div>
             </AnimatedSection>
             
-
+            <AnimatedSection delay={200}>
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white p-12 border border-contrast-low flex flex-col items-center justify-center gap-8 group">
+                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <img 
+                  src="/five-stars.png" 
+                  alt="5 Star Service Rating" 
+                  className="w-full max-w-[400px] h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="text-center relative z-10">
+                  <div className="text-primary font-black text-4xl mb-2">5.0 / 5.0</div>
+                  <div className="text-contrast-mid font-bold tracking-widest uppercase text-xs">Customer Excellence Rating</div>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
