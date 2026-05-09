@@ -114,22 +114,22 @@ export default function About() {
       </section>
 
       {/* Area Served */}
-      <section className="py-fluid-2xl bg-primary text-white relative overflow-hidden">
-        <div className="shape-blob -bottom-20 -right-20 w-[600px] h-[600px] opacity-10 bg-accent" />
+      <section className="py-fluid-2xl bg-white text-primary relative overflow-hidden border-t border-contrast-low">
+        <div className="shape-blob -bottom-20 -right-20 w-[600px] h-[600px] opacity-5 bg-primary" />
         
         <div className="max-w-7xl mx-auto px-fluid-md relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-accent font-bold tracking-[0.2em] uppercase text-sm mb-4 block [text-shadow:0_2px_4px_rgba(0,0,0,0.3)]">Our Footprint</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white [text-shadow:0_4px_12px_rgba(0,0,0,0.5)]">Serving the Island</h2>
-            <p className="text-white text-lg max-w-2xl mx-auto font-bold [text-shadow:0_2px_8px_rgba(0,0,0,0.4)]">We are proud to manage properties across the most vibrant communities in Prince Edward Island.</p>
+            <span className="text-accent font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Our Footprint</span>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-primary">Serving the Island</h2>
+            <p className="text-contrast-mid text-lg max-w-2xl mx-auto font-bold">We are proud to manage properties across the most vibrant communities in Prince Edward Island.</p>
           </AnimatedSection>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {['Cornwall', 'Charlottetown', 'Stratford', 'Summerside', 'Montague', 'Kensington', 'Winsloe', 'PEI'].map((city, i) => (
               <AnimatedSection key={i} delay={i * 50}>
-                <div className="group p-6 rounded-2xl bg-white/10 border border-white/20 flex items-center gap-4 transition-all duration-300 hover:bg-accent hover:border-accent hover:text-primary hover:scale-105 shadow-lg">
-                  <MapPin size={20} className="text-accent group-hover:text-primary" />
-                  <span className="font-bold tracking-wide text-white group-hover:text-primary">{city}</span>
+                <div className="group p-6 rounded-2xl bg-canvas border border-contrast-low flex items-center gap-4 transition-all duration-300 hover:bg-primary hover:border-primary hover:text-white hover:scale-105 shadow-sm hover:shadow-xl">
+                  <MapPin size={20} className="text-accent group-hover:text-white" />
+                  <span className="font-bold tracking-wide text-primary group-hover:text-white">{city}</span>
                 </div>
               </AnimatedSection>
             ))}
@@ -138,13 +138,14 @@ export default function About() {
           <AnimatedSection delay={300} className="text-center mt-20">
             <Link
               to="/contact"
-              className="group no-underline inline-flex items-center gap-3 bg-accent text-primary px-10 py-5 rounded-full font-bold text-lg transition-soft hover:scale-105 active:scale-95 shadow-xl shadow-accent/20"
+              className="group no-underline inline-flex items-center gap-3 bg-primary text-white px-10 py-5 rounded-full font-bold text-lg transition-soft hover:bg-accent hover:text-primary hover:scale-105 active:scale-95 shadow-xl shadow-primary/20"
             >
               Get in Touch <ArrowRight size={20} className="transition-transform group-hover:translate-x-2" />
             </Link>
           </AnimatedSection>
         </div>
       </section>
+
     </div>
   );
 }
