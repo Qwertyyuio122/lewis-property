@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --primary: #0a0f1d;
+  --primary-light: #162035;
+  --accent: #E2C044;
+  --accent-light: #f7d96d;
+  --canvas: #ffffff;
+  --canvas-dark: #f0f2f5;
+  --surface: #ffffff;
+  --contrast-low: #e2e8f0;
+  --contrast-mid: #334155;
+  
+  --glass: rgba(255, 255, 255, 0.9);
+  --glass-dark: rgba(1, 2, 5, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--primary);
+  background-color: var(--canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Fluid padding utility */
+.px-fluid-md {
+  padding-left: clamp(16px, 1.25vw + 12px, 36px);
+  padding-right: clamp(16px, 1.25vw + 12px, 36px);
+}
+
+@media (min-width: 760px) {
+  .px-fluid-md {
+    padding-left: clamp(32px, 3vw + 16px, 80px);
+    padding-right: clamp(32px, 3vw + 16px, 80px);
+  }
+}
+
+.py-fluid-2xl {
+  padding-top: clamp(80px, 7.5vw + 56px, 140px);
+  padding-bottom: clamp(80px, 7.5vw + 56px, 140px);
+}
+
+.gradient-mesh {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(196, 183, 138, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(1, 2, 5, 0.05) 0px, transparent 50%);
+}
+
+.glass-morphism {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.shape-blob {
+  background: var(--accent);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  filter: blur(80px);
+  opacity: 0.15;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Smooth transitions */
+.transition-soft {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
