@@ -138,7 +138,7 @@ export default function About() {
           <AnimatedSection delay={300} className="text-center mt-20">
             <Link
               to="/contact"
-              className="group no-underline inline-flex items-center gap-3 bg-primary text-white px-10 py-5 rounded-full font-bold text-lg transition-soft hover:bg-accent hover:text-primary hover:scale-105 active:scale-95 shadow-xl shadow-primary/20"
+              className="group no-underline inline-flex items-center gap-3 bg-accent text-primary px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 active:scale-95 shadow-xl shadow-accent/20"
             >
               Get in Touch <ArrowRight size={20} className="transition-transform group-hover:translate-x-2" />
             </Link>
