@@ -238,33 +238,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-fluid-2xl bg-surface">
-        <div className="max-w-4xl mx-auto px-fluid-md">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-accent font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Common Questions</span>
-            <h2 className="font-heading text-4xl font-bold text-primary">Service FAQ</h2>
-            <div className="w-20 h-1 bg-accent mx-auto mt-6 rounded-full" />
-          </AnimatedSection>
 
-          <div className="grid grid-cols-1 gap-6">
-            {[
-              { q: 'What areas do you serve?', a: 'We serve Cornwall, Charlottetown, Stratford, and throughout Prince Edward Island. If your property is on PEI, we can likely manage it.' },
-              { q: 'What are your management fees?', a: 'Fees vary based on property type and unit count. We provide transparent, competitive quotes with no hidden maintenance surcharges.' },
-              { q: 'How do you handle maintenance?', a: 'We have a network of trusted local contractors and handle everything from 24/7 emergency calls to routine inspections.' },
-            ].map((faq, i) => (
-              <AnimatedSection key={i} delay={i * 100}>
-                <div className="p-8 rounded-3xl bg-white border border-contrast-low shadow-sm group hover:shadow-md transition-soft">
-                  <h4 className="text-xl font-bold text-primary mb-3 flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-accent" /> {faq.q}
-                  </h4>
-                  <p className="text-contrast-mid leading-relaxed pl-5">{faq.a}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
